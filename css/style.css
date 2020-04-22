@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-size: 20px;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  font-size: 2rem;
+  font-weight: 400;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* ****** Home Section Start ****** */
+.home{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/body.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header .row{
+  max-width: 1180px;
+  margin: 0px auto;
+}
+.clearfix::after{
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0px;
+  clear: both;
+}
+.logo{
+  height: 120px;
+  width: auto;
+  float: left;
+  margin: 20px auto;
+}
+.main-nav{
+  float: right;
+  margin-top: 60px;
+}
+.main-nav li{
+  display: inline-block;
+  padding-left: 40px;
+}
+.main-nav li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.main-nav li a:hover{
+  border-bottom: 3px solid #bf55ec;
+}
+.home-content{
+  max-width: 1180px;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+}
+.home-content h1{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.home-button{
+  margin: 0px 10px 0px 150px;
+  /* border: 1px solid red; */
+}
+.home-button .btn{
+  border: 1px solid red;
+  margin: 10px 10px;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 100px;
+  color: #fff;
+  transition: 0.5s;
+  /* background-color: tomato; */
+}
+.home-button .btn:hover{
+  color: #bf55ec;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.home-content span{
+  animation: colorchange 1s infinite;
+}
+@keyframes  colorchange{
+  0%{ color: red; }
+  25%{ color : #fff; }
+  50%{ color: #bf55ec; }
+  100%{color: #000;}
+}
+/* ****** Home Section End ****** */
+
+
+/* **************** Responsive Queries Start *************** */
+@media only screen and (max-width: 1180px){
+  .home-content{
+    width : 100%;
+  }
+  .home-button{
+    margin: 0px 10px 0px 120px;
+  }
+  .home-button .btn{
+    margin: 5px 5px;
+    padding: 5px 15px;
+  }
+}
+@media only screen and (max-width: 998px){
+  h1{
+    font-size: 1.6rem;
+  }
+
+}
+@media only screen and (max-width: 778px){
+  h1{
+    font-size: 1rem;
+  }
+  .main-nav{
+    display: none;
+  }
+}
+/* **************** Responsive Queries End *************** */
